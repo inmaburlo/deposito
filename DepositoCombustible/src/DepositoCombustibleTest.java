@@ -5,9 +5,9 @@ import org.junit.Test;
 public class DepositoCombustibleTest {
 
 	@Test
-	public final void testValorActualDeposito() {
+	public final void testMaximaCapacidadDeposito() {
 		DepositoCombustible deposito = new DepositoCombustible(0, 0);
-		double nivelDeposito = deposito.getDepositoNivel();
+		double nivelDeposito = deposito.getDepositoMax();
 		assertNotNull(nivelDeposito);
 	}
 }
