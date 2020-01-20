@@ -5,23 +5,23 @@ import org.junit.Test;
 public class DepositoCombustibleTest {
 
 	@Test
-	public final void testDepositoConsumirMitad() {
+	public final void testDepositoLlenarMitad() {
 		DepositoCombustible deposito = new DepositoCombustible(12, 0);
-		deposito.consumir(6);
-		assertEquals(deposito.getDepositoMax()/2,6,1);
+		deposito.fill(6);
+		assertEquals(deposito.getDepositoMax()/2,deposito.getDepositoNivel(),1);
 	}
 	
 	@Test
-	public final void testDepositoConsumirCompleto() {
-		DepositoCombustible deposito2 = new DepositoCombustible(12, 12);
-		deposito2.consumir(12);
-		assertEquals(deposito2.getDepositoNivel(),0,1);
+	public final void testDepositoLlenarCompleto() {
+		DepositoCombustible deposito2 = new DepositoCombustible(12, 0);
+		deposito2.fill(12);
+		assertEquals(deposito2.getDepositoNivel(),12,1);
 	}
 	
 	@Test
-	public final void testDepositoConsumirNegativo() {
-		DepositoCombustible deposito2 = new DepositoCombustible(12, 12);
-		deposito2.consumir(-12);
-		assertEquals(deposito2.getDepositoNivel(),24,1);
+	public final void testDepositoLlenarNegativo() {
+		DepositoCombustible deposito2 = new DepositoCombustible(12, 0);
+		deposito2.fill(-12);
+		assertEquals(deposito2.getDepositoNivel(),-12,1);
 	}
 }
