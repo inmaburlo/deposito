@@ -19,6 +19,13 @@ public class DepositoCombustibleTest {
 	}
 	
 	@Test
+	public final void testDepositoVacio() {
+		DepositoCombustible deposito = new DepositoCombustible(0, 0);
+		boolean nivelDeposito = deposito.estaVacio();
+		assertTrue(nivelDeposito);
+	}
+	
+	@Test
 	public final void testDepositoLlenarMitad() {
 		DepositoCombustible deposito = new DepositoCombustible(12, 0);
 		deposito.fill(6);
