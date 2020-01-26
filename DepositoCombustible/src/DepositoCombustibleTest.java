@@ -5,6 +5,15 @@ import org.junit.Test;
 public class DepositoCombustibleTest {
 
 	@Test
+	public final void testValorActualDeposito() {
+		DepositoCombustible deposito = new DepositoCombustible(0, 0);
+		double nivelDeposito = deposito.getDepositoNivel();
+		assertNotNull(nivelDeposito);
+	}
+	
+	
+	
+	@Test
 	public final void testDepositoLlenarMitad() {
 		DepositoCombustible deposito = new DepositoCombustible(12, 0);
 		deposito.fill(6);
